@@ -41,9 +41,7 @@ const rolee = require("../../commands/info/twittermodel.js");
                 return interaction.channel.send('Successfully set the ping role!')
             }
             else if (data) {
-                // data.findOneAndUpdate({ Guild: message.guild.id, Toggle: choice })
-                //  message.channel.send('Successfully updated the chat filter!')
-                // console.log(data)
+               
                 data.role = role
                 await data.save()
                 interaction.reply({
