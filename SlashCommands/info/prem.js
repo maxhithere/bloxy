@@ -27,12 +27,9 @@ module.exports = {
           let user = interaction.options.getString("user")
         //let user2 = Number(user)
    
-   // if(user == NaN) {
-     //   message.channel.send('Please provide a valid user **ID**')
-   // } 
+ 
        let information2 = await noblox.getIdFromUsername(user) 
- // let check = await noblox.getUsernameFromId(user)
-  //let check2 = await noblox.getIdFromUsername(check) 
+ 
 
 
 
@@ -43,9 +40,7 @@ try {
   console.log(hasPremium)
 
 
-   //let assetNamesa = badges.map(asset => asset.name).join("\n")
-
-   //console.log(assetNamesa)
+ 
   
     const embed = new MessageEmbed()
     .setTitle(`Premium info for **${user}**`)
