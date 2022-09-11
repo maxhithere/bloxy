@@ -54,9 +54,9 @@ module.exports = async (client) => {
 
     
     
-      const errchannel = '988448718221111366'
+      const errchannel = 'channel id (optional if u want a channel to send error messages to)'
 
-//const errchannel = '988448718221111366'
+
 
 process.on('unhandledRejection',(reason,p)=>{
     console.log("/{ANTI CRASH}\ Unhandled Rejection/Catch")
