@@ -9,14 +9,7 @@ const channele = require("../../commands/info/twittermodel.js");
       name: "twitteroff",
       description: "turns the twitter system off",
     type: 'CHAT_INPUT',
-   // options: [
-	//	{
-	//		name: 'chan',
-	//		description: 'The channel',
-		//	type: 'CHANNEL',
-	//		required: true
-	//	},
-	//],
+ 
    
       run: async (client, interaction, args) => {
     
@@ -26,8 +19,7 @@ const channele = require("../../commands/info/twittermodel.js");
        
     
           
-        //let channel = interaction.options.getChannel('chan')
-        //if(!channel) return message.channel.send('Please specify a channel to send the tweets to!')
+      
           let chan;
           let r;
         channele.findOne({ Guild: interaction.guild.id }, async (err, data) => {
