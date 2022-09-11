@@ -27,9 +27,7 @@ module.exports = {
           let game = interaction.options.getString("game")
         let user2 = Number(game)
         
-   // if(user == NaN) {
-     //   message.channel.send('Please provide a valid user **ID**')
-   // } 
+  
 try {
     
     
@@ -41,7 +39,7 @@ try {
            console.log('nope')
         }
         let _data = await response.json();
-      //  console.log(_data) //.Id
+    
         return _data.universeId;
         
     }
@@ -64,7 +62,7 @@ try {
     .setTitle(`Information on badges for **${user2}**`)
    
 
-    //.addField('Assets', `${assetNames}`)
+   
     .addField('Badges', `${desc}`)
 
    // .addField('Emotes', `${wearingAssets.emotes}`)
