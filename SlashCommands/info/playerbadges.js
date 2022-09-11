@@ -25,14 +25,9 @@ module.exports = {
     run: async (client, interaction, args) => {
         
           let user = interaction.options.getString("user")
-        //let user2 = Number(user)
-   
-   // if(user == NaN) {
-     //   message.channel.send('Please provide a valid user **ID**')
-   // } 
+      
        let information2 = await noblox.getIdFromUsername(user) 
- // let check = await noblox.getUsernameFromId(user)
-  //let check2 = await noblox.getIdFromUsername(check) 
+ 
 
 
 
@@ -40,10 +35,7 @@ module.exports = {
 try {
 
        let badges = await noblox.getPlayerBadges(information2, 50, "Asc")
-   // console.log(badges)
-   // console.log(gameSocialLinks)
- 
-
+  
 
    let assetNamesa = badges.map(asset => asset.name).join("\n")
 
