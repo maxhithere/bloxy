@@ -93,8 +93,7 @@ module.exports = {
 
         const welcomer = new canvacord.Welcomer()
         .setUsername(`${dausername} (${(interaction.user.tag)})`)
-        //.setMemberCount (message.member.guild.memberCount)
-       // .setGuildName (member.guild.name)
+   
 
         .setAvatar(`https://www.roblox.com/headshot-thumbnail/image?userId=${RobloxId}&width=420&height=420&format=png`)
         .setBackground(`https://preview.redd.it/toq3q2u3iqj51.png?width=640&crop=smart&auto=webp&s=ee1cdc0df52be7bfabf8d142c27f3f9b71582952`)
@@ -171,42 +170,7 @@ module.exports = {
 
           let po = await p()
 
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          /*
-          
-
-
-      
-
-        SOMEHOW MOVE THE GAME CHECK TO BE AFTER THE CODE CHECK AND THEN IT MIGHT WORK
-
-
-
-
-
-
-          */
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-          //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            
-            // async function CheckForCode(userId, Code) {
-            //     let response = await fetch(`https://www.roblox.com/users/${userId}/profile`).then();
-            //     if (response.status != 200) { return false; }
-            //     let html = await response.text();
-            //     // console.log(html)
-            //     if (html.indexOf(Code) != -1) {
-            //         return true; //true
-            //     }
-            //     return console.log('no'); //false
-            // }
-
+    
 
             async function CheckForCode(userId, Code) {
               let response = await fetch(`https://www.roblox.com/users/${userId}/profile`).then();
@@ -221,7 +185,7 @@ module.exports = {
                 return false; //false
                 
               }
-             //return console.log('no'); //false
+            
           }
 
 
@@ -274,24 +238,7 @@ module.exports = {
             }
             if (found == true) {
               
-        //       let webhookid;
-        //       let webhooktoken;
-        // const guildQuery = Guild?.findOne({ id: interaction.guild.id }, async (err, data) => {
-        //   if(err) throw err;
-        //   if(!data){
-        //     return
-        //   } else{
-        //     webhookid = data.webhookid
-        //     webhooktoken = data.webhooktoken
-        //     let webhookClient = new WebhookClient({ id: webhookid, token: webhooktoken });
-        //     if(found == false){
-        //       data.channel.send({ embeds: [embed5] }); //webhookClient
-        //     } else if(found == true){
-        //       data.channel.send({ embeds: [embed3] }); //webhookClient
-        //     }
-        //   }
-
-        // });
+      
 
         
    
@@ -311,8 +258,7 @@ module.exports = {
                   const attachment = new Discord.MessageAttachment(data, 'welcomer.png')
                  interaction.user.send({files: [attachment] })
                   })
-                 // webhookClient.send({ embeds: [embed3]}); ??  webhookClient.send({ embeds: [embed3]}); 
-                  // webhookClient?.send({ embeds: [embed3]}) || null 
+            
 
 
                 verify.findOne({ Guild: interaction.guild.id }, async (err, data) => {
@@ -367,18 +313,11 @@ module.exports = {
           
 
 
-       
-
-
-
-
-
-
 
 
         else {
 
-            //return await message.author.send(message.author.toString(), {embed});
+         
             await interaction.user.send({content:'You have failed verification. The code not found in your profile, please try again.', components: []})
         } 
 
