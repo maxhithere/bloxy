@@ -27,12 +27,7 @@ module.exports = {
           let user = interaction.options.getString("user")
         //let user2 = Number(user)
    
-   // if(user == NaN) {
-     //   message.channel.send('Please provide a valid user **ID**')
-   // } 
-       
- // let check = await noblox.getUsernameFromId(user)
-  //let check2 = await noblox.getIdFromUsername(check) 
+
 
 
 
@@ -40,8 +35,7 @@ module.exports = {
 try {
 let information2 = await noblox.getIdFromUsername(user) 
       let followers = await noblox.getFriends(information2, "Asc", 50)
-   // console.log(followers)
-   // console.log(followers)
+   
   
  let assetNamesa = followers.data.map(asset => asset.name).join("\n")
 //console.log(assetNamesa)
