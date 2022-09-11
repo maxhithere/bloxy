@@ -13,7 +13,7 @@ client.on("messageCreate", async message => {
     if(data.Toggle == "false") {
       return;
     } else if(data.Toggle == "true") {
-      let blacklisted = ['fuck', 'hoe', 'whore', 'bitch', 'sped', 'nigga', 'nigger', 'niga', 'fhag', 'faggot', 'fag', 'smd', 'retard', 'boob', 'anal', 'vagina', 'pussy', 'dick', 'penis', 'porn', 'sperm', 'diok', 'yhole', 'whore', 'slut', 'clit', 'spastic', 'spaz', 'coochie', 'dike', 'cum', 'cock', 'ass', 'shit'];
+      let blacklisted = ['write ur blacklisted words here']; //example -->  let blacklisted = ['carrot', 'apple', 'orange'];
       let foundInText = false;
       let length;
       let tagged = ['####', '###', '#####', '######', '##', '#######', '######']
