@@ -10,7 +10,7 @@ const db = require('../commands/info/twittermodel.js')
 let {CronJob} = require('cron')
 client.on("guildMemberUpdate", () => {
     
-    let token = `AAAAAAAAAAAAAAAAAAAAAO%2BKdgEAAAAAqxCyV56mgSbm2DJFb2ug%2FUT7Tss%3DDSw8vKkAyjDs4iD16WRi33oU86B245mqSy6E4pfQu0DIYyUWr8`
+    let token = `twitter token`
 let role;
 let channel;
     let client2 = require("../index");
@@ -28,11 +28,7 @@ let channel;
 
                 }
 
-              //  else if(data.Role == null){
-               //     role = 'none'
-               //     data.Channel = channel
-
-              //  }
+         
                 
                 else{
                   if(data.Role == null){
@@ -66,7 +62,7 @@ let channel;
                    let supercalifragilisicexpealidocious = final.map(x => x.id_str)
                      arr.push(supercalifragilisicexpealidocious)
                   let check = await db.findOneAndUpdate({ Tweet: supercalifragilisicexpealidocious})
-                 //  console.log(supercalifragilisicexpealidocious)
+                
                   
                   
                         let ok3 = final.map(x => x.retweet_count)
@@ -81,8 +77,7 @@ let channel;
                        let yes = moment(Date.now()).toISOString(true).substring(0, 23)
                        let yes2 = moment(new Date(compare)).toISOString(true).substring(0, 23)//.getTime() / 1000)
                
-                      // console.log(yes2)
-                     //  console.log(yes)
+                   
                
                
                
@@ -101,14 +96,7 @@ let channel;
                         .addField('Retweets', `${ok3}`, true)
                         .addField('Favorites', `${ok4}`, true)
                
-                       // console.log(final)
-                     //let comapare = final.created_at
-                     ///console.log(comapare)
-                   //  if(comapare == Date.now()){
-               //
-               //console.log(Date.now())
-                  //   }
-                 // if(yes == yes2 && role){
+                   
                         console.log(check.Tweet, 'check')
                         console.log(supercalifragilisicexpealidocious, 'super')
                  for(let i in arr) {
@@ -120,7 +108,7 @@ let channel;
 
                       else if(arr[i] !== supercalifragilisicexpealidocious && role == null){
                         client.channels.cache.get(channel).send({embeds: [embed]})
-                  //     }
+
           
            }
 
