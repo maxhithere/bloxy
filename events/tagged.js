@@ -26,9 +26,9 @@ client.on("messageCreate", async message => {
           let msg = JSON.stringify(message.content.length)
           if (msg.includes(ex.length)) length = ex
         }
-       // if(tagged.length.includes(message.content.length))
        
-                 if (foundInText) { //ID in order: Community Manager, Administrator
+       
+                 if (foundInText) { 
                       message.delete();
                     let msg2 = await message.channel.send(`The awful word that ${message.author} meant to say but was sensored was ${length}`)
                     setTimeout(() => msg2.delete(), 5000);
