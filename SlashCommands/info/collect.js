@@ -27,12 +27,9 @@ module.exports = {
           let user = interaction.options.getString("user")
         //let user2 = Number(user)
    
-   // if(user == NaN) {
-     //   message.channel.send('Please provide a valid user **ID**')
-   // } 
+  
        let information2 = await noblox.getIdFromUsername(user) 
- // let check = await noblox.getUsernameFromId(user)
-  //let check2 = await noblox.getIdFromUsername(check) 
+ 
 
 
 
@@ -40,7 +37,7 @@ module.exports = {
 try {
      let collectibles = await noblox.getCollectibles({userId: information2, sortOrder: "Asc", limit: 50})
     
-   // console.log(collectibles)
+  
     let assetNamesa = collectibles.map(asset => asset.name + ': ' + asset.recentAveragePrice).join("\n")
     // if(collectibles > 50) return interaction.reply({content: 'user has too many collectibles to be displayed', ephemeral: true})
     if(!assetNamesa) assetNamesa = 'none'
