@@ -40,8 +40,7 @@ try {
            console.log('nope')
         }
         let _data = await response.json();
-        //console.log(_data)
-      //  console.log(_data) //.Id
+      
         return _data.universeId;
         
     }
