@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 const { Configuration, BloxlinkAPI } = require("@morgann1/bloxlink");
 const noblox = require('noblox.js');
 const configuration = new Configuration({
-    apiKey: "09e3e2f6-c44c-423b-b317-00c9d7ebf5418c47c5bd-26f4-4f70-ae56-d62e9ba70be6f7a1d323-5d10-49bd-991b-fa6d6b374c4f"
+    apiKey: "bloxlink api key"
 });
 
 const bloxlink = new BloxlinkAPI(configuration);
@@ -40,7 +40,7 @@ options: [
         let id2;
         let userr;
         let userr2;
-        //console.log(user)
+        
        
         try {
 
@@ -103,12 +103,10 @@ options: [
             let final = await info(user)
             //console.log(final)
             if (final === 'No ROBLOX accounts linked with this user.') {
-              //  embednorover.addField(`Rover (No Result)`, `No ROBLOX accounts linked with this user.`)
-                   // .setFooter({ text: 'Thank you RbxSociety for the inspiration of this command' })
+              
                     successful1 = false
             } else {
-              //  embedyesrover.addField(`Rover (Result)`,`https://www.roblox.com/users/${final.robloxId}/profile`)
-                   // .setFooter({ text: 'Thank you RbxSociety for the inspiration of this command' })
+          
                     successful1 = true
                     id2 = final.robloxId
                     userr = final.robloxUsername
@@ -121,16 +119,14 @@ options: [
             let bloxid;
             let final2 = await info2(user)
             console.log(final2)
-            //console.log(final)
+           
             if (final2 === 'No ROBLOX accounts linked with this user.') {
-                //embedno.addField(`Bloxlink (No Result)`, `No ROBLOX accounts linked with this user.`)
-                 //   .setFooter({ text: 'Thank you RbxSociety for the inspiration of this command' })
+              
                     successful2 = false
 
             }
             else if (final2 === undefined) {
-              //  embed.setDescription(`No ROBLOX accounts linked with this user.`)
-                 //   .setFooter({ text: 'Thank you RbxSociety for the inspiration of this command' })
+           
                     successful2 = false
                 
                    
@@ -142,8 +138,7 @@ options: [
 
 
             else {
-                //embedyes.addField(`Bloxlink (Result)`,`https://www.roblox.com/users/${final.robloxId}/profile`)
-                //    .setFooter({ text: 'Thank you RbxSociety for the inspiration of this command' })
+               
 
                 successful2 = true
                 rbxidd = final.robloxId
@@ -167,7 +162,7 @@ options: [
             
             async function info3(user) {
 
-                let response = await fetch(`https://api.rbxbolt.com/v1/discord/${user}?key=7B7N24zyYUFKo6DroOvuQvY5xpH0BF8eLji`)//.then(); 
+                let response = await fetch(`https://api.rbxbolt.com/v1/discord/${user}?key=rbxboltapikey`)//.then(); 
                 if (response.status == 404) {
                     _data = 'No ROBLOX accounts linked with this user.'
                 }
@@ -191,8 +186,7 @@ options: [
 
 
             if (finalrbxbolt == 'No ROBLOX accounts linked with this user.') {
-              //  embedno.addField(`RBXBolt (No Result)`, `No ROBLOX accounts linked with this user.`)
-                 //   .setFooter({ text: 'Thank you RbxSociety for the inspiration of this command' })
+             
                     successful3 = false
             } else if(finalrbxbolt.UserId == undefined){
                 successful3 = false
@@ -200,8 +194,7 @@ options: [
                
             
             else {
-               // embedyes.addField(`RBXBolt (Result)`,`https://www.roblox.com/users/${final.UserId}/profile`)
-                //    .setFooter({ text: 'Thank you RbxSociety for the inspiration of this command' })
+         
                     successful3 = true
                     
             }
@@ -226,48 +219,7 @@ if(responser.status == 404 || responser == `https://devforum.roblox.com/u/undefi
     } 
 }
 
-// async function info4(user) {
-
-//     let response = await fetch(`https://devforum.roblox.com/u/${userr ? userr : userr2}/summary`)//.then(); 
-//     if (response.status == 404) {
-//         _data = 'No ROBLOX accounts linked with this user.'
-//     }
-
-
-
-//     else if (response.status !== 200) {
-//         console.log('nope')
-//     }
-//     else {
-//         _data = await response.json();
-//     }
-
-//     return _data;
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// thank the lord for copilot
 
 if(successful1 === false && successful2 === false && successful3 === false){
     let em = new MessageEmbed()
@@ -349,26 +301,6 @@ if(successful1 === true && successful2 === true && successful3 === true){
     
    interaction.reply({embeds: [em]})
 }
-
-
-
-
-
-
-
-
-
-
-            // if (successful) {
-            //     message.channel.send({
-            //         embeds: [embedyes]
-            //     })
-            // } else {
-            //     message.channel.send({
-            //         embeds: [embedno]
-            //     })
-            // }
-
 
         } catch (err) {
             console.log(err)
