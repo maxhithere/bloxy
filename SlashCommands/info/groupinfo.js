@@ -19,7 +19,7 @@ const Discord = require('discord.js');
       run: async (client, interaction, args) => {
     
         const group = interaction.options.getString("group");
-        //2888350255
+        
       try {
           
       if(!group) return interaction.reply('Please provide a group ID')
@@ -28,13 +28,8 @@ const Discord = require('discord.js');
           if(groupInfo == null || !groupInfo){
               return interaction.reply('Please provide a valid group **ID**')
           }
-         // console.log(gameSocialLinks)
-      
-        // let assetNamesa = gameSocialLinks.map(asset => asset.).join("\n")
-         
-      
-         //console.log(assetNamesa)
-         // if(!assetNamesa) assetNamesa = 'none'
+     
+   
           const embed = new MessageEmbed()
           .setTitle(`Information for group **${group}**`)
           .addField('Name', `${groupInfo.name}`)
